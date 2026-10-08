@@ -1,1 +1,29 @@
+Requisitos
+Fila Lanchonete
+1.	O sistema deve armazenar as informações do cliente garantindo que a propriedade de nome guarde o nome fornecido e a propriedade de número guarde a senha correspondente.
+2.	O gerenciamento de atendimentos deve seguir rigorosamente a regra First In, First Out (FIFO). O cliente adicionado primeiro deve ser o primeiro retornado ao atender, e as novas entradas devem entrar ao final da fila.
+Hamburgueria		
+3.	O sistema deverá verificar se o produto solicitado está presente no cardápio, impedindo o processamento de pedidos inválidos e exibindo uma mensagem informativa ao usuário.
+4.	O sistema deverá verificar se há quantidade suficiente de todos os ingredientes necessários para preparar o produto, considerando ingredientes repetidos na receita e informando aqueles que estiverem em falta.
+5.	O sistema deverá descontar corretamente as quantidades dos ingredientes utilizados somente quando houver estoque suficiente para preparar o produto, garantindo que pedidos não atendidos não alterem o estoque.
 
+Critérios de Conclusão
+1.	O cadastro deve criar clientes corretamente, armazenando nome e número da senha nos campos correspondentes, sem permitir nome ou senha vazios e sem solicitar/armazenar dados adicionais como telefone
+2.	A fila deve respeitar o princípio FIFO( First in, First out), de modo que o primeiro cliente cadastrado seja sempre o primeiro a ser atendido e identificado como próximo cliente
+3.	O sistema deve informar corretamente a quantidade atual de clientes na fila, considerando todos os clientes cadastrados e ainda não atendidos ou removido.
+4.	A funcionalidade de remoção deve localizar e remover corretamente um cliente pelo nome informado, retornando sucesso quando o cliente existir e informado, retornando sucesso quando o cliente existr e informando que ele não foi encontrado caso contrário
+5.	O sistema deve apresentar corretamente as informações do cliente (nome e senha) e fornecer mensagens coerentes para as operações do menu, incluindo opções inválidas
+
+Entradas
+O sistema recebe informações fornecidas pelo usuario por meio do menu da aplicação.
+
+Saídas 
+O sistema retorna corretamente as informações solicitadas pelo usuário conforme a operação realizada.
+
+Restrições
+
+•	O registro do cliente deve conter apenas os campos nome e numero. É expressamente proibido solicitar, armazenar ou retornar informações adicionais (como telefone, e-mail ou endereço).
+•	O gerenciamento da fila deve ocorrer exclusivamente em memória principal (armazenamento temporário durante a execução), sem persistência em banco de dados ou arquivos externos
+•	proximo_cliente() deve retornar um objeto do tipo Cliente ou None (quando vazia).
+•	quantidade_clientes() deve retornar um número inteiro int >= 0.
+•	remover_cliente(nome) deve retornar um booleano (True ou False).
